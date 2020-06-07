@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>subsc mng</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Subscription Manager</h1>
+  <h3>登録しているサイト</h3>
+  <table class="">
+    <thead id="table-head" class="">
+
+    </thead>
+    <tbody id="table-body">
+
+    </tbody>
+  </table>
+  <p id="total" class="total"></p>
+  <h3>新しいサイトの登録</h3>
+  <form>
+    <p class="form-p">サイト名</p>
+    <input id="site-name" type="text" name="site-name">
+    <p class="form-p">URL</p>
+    <input id="site-url" type="text" name="site-url">
+    <p class="form-p">金額</p>
+    <input id="site-pay" type="text" name="site-pay">  
+    <button id="submit">登録</button>
+  </form>
+  <br>
+  <p id="message"></p>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
