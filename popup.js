@@ -80,6 +80,7 @@ function createTableBody(tableId, subList) {
   const tableBody = document.getElementById(tableId);
   let total = 0;
   let index = 0;
+
   subList.forEach(subscription => {
     let tr = document.createElement("tr");
     // サイト名
@@ -107,6 +108,7 @@ function createTableBody(tableId, subList) {
     tableBody.appendChild(tr);
     index++;
   });
+
 }
 
 /**
@@ -123,7 +125,10 @@ function calcTotal(subList) {
 
 document.addEventListener("DOMContentLoaded", function() {
   chrome.storage.local.get(["subscriptionList"], function(items) {
-    subscriptionList = items.subscriptionList;
+    if (items.subscriptionList) {
+      subscriptionList = items.subscriptionList;
+    }
+    console.log(items.subscriptionList);
     // テーブルヘッドの生成
     createTableHead("table-head", headList);
     // テーブルボディの生成
