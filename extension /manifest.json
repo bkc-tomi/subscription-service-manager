@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "subscription service manager",
+  "version": "1.0",
+  "description": "使っているサブスクリプションサービスを登録して管理します。サービスを提供しているサイトへの履歴を取得することでどれだけサービスを利用しているかがわかります。",
+  "browser_action": {
+    "default_icon": {
+      "16": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "history",
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
